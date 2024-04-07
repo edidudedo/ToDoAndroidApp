@@ -18,17 +18,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTodoDate"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/date"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/tvTodoTitle"
-        app:layout_constraintEnd_toStartOf="@+id/cbDone"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <TextView-->
+<!--        android:id="@+id/tvTodoDate"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/date"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/tvTodoTitle"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/cbDone"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
     <CheckBox
         android:id="@+id/cbDone"
