@@ -53,11 +53,11 @@ class TodoAdapter (
         val curTodo = todos[position]
 
         val tvTodoTitle = holder.itemView.findViewById<TextView>(R.id.tvTodoTitle)
-        val tvTodoDate = holder.itemView.findViewById<TextView>(R.id.tvTodoDate)
+//        val tvTodoItemDate = holder.itemView.findViewById<TextView>(R.id.tvTodoItemDate)
         val cbDone = holder.itemView.findViewById<CheckBox>(R.id.cbDone)
 
         tvTodoTitle.text = curTodo.title
-        tvTodoDate.text = curTodo.date
+//        tvTodoItemDate.text = curTodo.date
         cbDone.setOnCheckedChangeListener(null)
         cbDone.isChecked = curTodo.isChecked
         toggleStrikeThrough(tvTodoTitle, curTodo.isChecked)

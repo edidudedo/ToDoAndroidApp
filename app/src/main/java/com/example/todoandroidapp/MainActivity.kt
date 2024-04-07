@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var todoAdapter : TodoAdapter
+    private lateinit var todoParentsAdapter : TodoParentsAdapter
     private var lastSelectedYear: Int = -1
     private var lastSelectedMonth: Int = -1
     private var lastSelectedDay: Int = -1
@@ -30,12 +30,12 @@ class MainActivity : AppCompatActivity() {
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
 //            insets
 //        }
-        val rvTodoItems = findViewById<RecyclerView>(R.id.rvToDoItems)
-        todoAdapter = TodoAdapter(mutableListOf())
-        Log.d("Todo123", todoAdapter.toString())
-        rvTodoItems.adapter = todoAdapter
 
-        rvTodoItems.layoutManager = LinearLayoutManager(this)
+        val rvTodoParents = findViewById<RecyclerView>(R.id.rvToDoItems)
+        todoParentsAdapter = TodoParentsAdapter()
+
+        rvTodoParents.layoutManager = LinearLayoutManager(this)
+        rvTodoParents.adapter = todoParentsAdapter
         val btnAddTodo = findViewById<Button>(R.id.btnAddTodo)
         val btnDeleteDoneTodo = findViewById<Button>(R.id.btnDeleteDoneTodo)
         val etTodoTitle = findViewById<EditText>(R.id.etTodoTitle)
@@ -44,13 +44,13 @@ class MainActivity : AppCompatActivity() {
             val tvDate = findViewById<TextView>(R.id.tvDate)
             if(todoTitle.isNotEmpty()){
                 val todo = Todo(todoTitle, false, tvDate.text.toString())
-                todoAdapter.addTodo(todo)
+                todoParentsAdapter.addTodo(todo)
                 etTodoTitle.text.clear()
                 setToCurrentDate()
             }
         }
         btnDeleteDoneTodo.setOnClickListener {
-            todoAdapter.deleteDoneTodos()
+            todoParentsAdapter.deleteDoneTodos()
         }
         setToCurrentDate()
         val btnShowCalendar = findViewById<Button>(R.id.btnShowCalendar)
