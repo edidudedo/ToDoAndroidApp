@@ -6,4 +6,5 @@
     <string name="add_todo">Add Todo</string>
     <string name="enter_todo_title">Enter Todo Title</string>
     <string name="example">Example</string>
+    <string name="my_to_do_list">My TO-DO-LIST</string>
 </resources>
