@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ToDoAndroidApp</string>
+    <string name="date">Date</string>
+    <string name="show_calendar">Show Calendar</string>
+    <string name="delete_done">Delete Done</string>
+    <string name="add_todo">Add Todo</string>
+    <string name="enter_todo_title">Enter Todo Title</string>
+    <string name="example">Example</string>
 </resources>
